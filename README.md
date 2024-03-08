@@ -1,7 +1,7 @@
 # gRPC Sample
 [gRPC](https://grpc.io/) is a Remote Procedure Call (RPC) framework for building systems of distributed applications in heterogeneous environments. This sample shows how you can use it in applications created with [DevOps Model RealTime](https://www.hcl-software.com/devops-model-realtime).
 
-This sample contains a [gRPC server](/tree/main/grpc-server) (implemented with Model RealTime) and a [gRPC client](/tree/main/grpc-client) (implemented as a C++ command-line application).
+This sample contains a [gRPC server](/grpc-server) (implemented with Model RealTime) and a [gRPC client](/grpc-client) (implemented as a C++ command-line application).
 
 ## Preparations
 1. Download, build and install gRPC
@@ -15,7 +15,7 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
 2. Add the location where you installed the gRPC tools to your PATH environment variable
 
 ## Build the client
-1. You need to build the client before the server since it contains the [.proto file](/blob/main/grpc-client/proto/maze.proto) that describes the RPCs implemented by the server. This file is used both by the client and the server.
+1. You need to build the client before the server since it contains the [.proto file](/grpc-client/proto/maze.proto) that describes the RPCs implemented by the server. This file is used both by the client and the server.
 
 ```
 ..grpc-client/build> cmake .. -G "Visual Studio 17 2022"
@@ -25,10 +25,10 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
 This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
 
 ## Build the server
-4. Open the [gRPC server](/tree/main/grpc-server) project in Model RealTime.
-5. Open the TC file [`server.tcjs`](/blob/main/grpc-server/server.tcjs) and edit the variables in the beginning of the file that specify the location where you placed the gRPC source code (`grpcSourceLocation`) and where you installed the gRPC tools and libraries (`grpcInstallLocation`).
-6. Also edit the `targetServicesLibrary` property to specify the path to the TargetRTS to use. If you want to use the default TargetRTS that comes with Model RealTime, you can delete this property, but remember that with that version you cannot debug. Other properties that have to be modified depending on if you want to debug or not (and which compiler that is used) are `compileArguments` and `linkArguments`. By default they are set so you can debug with Visual Studio.
-7. Build the TC.
+1. Open the [gRPC server](/grpc-server) project in Model RealTime.
+2. Open the TC file [`server.tcjs`](/grpc-server/server.tcjs) and edit the variables in the beginning of the file that specify the location where you placed the gRPC source code (`grpcSourceLocation`) and where you installed the gRPC tools and libraries (`grpcInstallLocation`).
+3. Also edit the `targetServicesLibrary` property to specify the path to the TargetRTS to use. If you want to use the default TargetRTS that comes with Model RealTime, you can delete this property, but remember that with that version you cannot debug. Other properties that have to be modified depending on if you want to debug or not (and which compiler that is used) are `compileArguments` and `linkArguments`. By default they are set so you can debug with Visual Studio.
+4. Build the TC.
 
 ## Run the sample
 The sample application is about walking a maze represented with a state machine in the `Maze` capsule. From a state in the maze you can either go east, west, north or south. Valid paths are represented by transitions. If you find your way out of the maze (not very hard) you reach the goal.
@@ -56,14 +56,14 @@ maze_client.exe --target 172.27.223.1:50052
 ```
 
 ## How the sample works
-Refer to the [.proto file](https://github.com/HCL-TECH-SOFTWARE/lib-grpc-server/blob/main/grpc-client/proto/maze.proto) and the picture below to understand how the sample works:
+Refer to the [.proto file](/grpc-client/proto/maze.proto) and the picture below to understand how the sample works:
 
 ![](images/server_client.png)
 
 ### Asynchronous request without data
 The "west", "east", "north" and "south" commands will cause an event to be asynchronously sent. They don't have a data parameter.
 
-```proto
+```protobuf
 // Send an event without data
 rpc GoWest (google.protobuf.Empty) returns (google.protobuf.Empty) {}
 rpc GoEast (google.protobuf.Empty) returns (google.protobuf.Empty) {}
@@ -76,7 +76,7 @@ When the client sends these requests they will be intercepted by the server's th
 ### Asynchronous request with data
 The "adjust" command takes an integer as argument and the corresponding RPC therefore has an input message for transfering that data.
 
-```proto
+```protobuf
 // Send an event with data
 rpc AdjustStepCount (AdjustStepCountRequest) returns (google.protobuf.Empty) {}
 
@@ -91,7 +91,7 @@ This request is handled by the server in exactly the same way as described above
 ### Synchronous request with reply data
 The "steps" command causes the client to make a synchronous request to the server for getting the current step count. 
 
-```proto
+```protobuf
 // Invoke an event with reply data
 rpc StepCount (google.protobuf.Empty) returns (StepCountReply) {}
 
@@ -106,7 +106,7 @@ The server handles this request in the same way as the asynchronous requests, bu
 ### Subscribing for outgoing events
 The client can subscribe to get notified by the server when an outgoing event is received by the `gRPC_Server` capsule on its `commands` port. 
 
-```proto
+```protobuf
 // Subscribe for outgoing event with data
 rpc Subscribe_WrongWay (google.protobuf.Empty) returns (stream WrongWay) {}
 rpc Subscribe_GoalReached (google.protobuf.Empty) returns (stream StepCountReply) {} // Messages can be "reused"
@@ -126,7 +126,7 @@ message WrongWay {
 ### Unsubscribing for outgoing events
 The server may offer a way for the client to unsubscribe from getting notified for outgoing events. In the sample, the server offers this for the `wrongWay()` event.
 
-```proto
+```protobuf
 // Unsubscribe for outgoing event
 rpc Unsubscribe_WrongWay (google.protobuf.Empty) returns (google.protobuf.Empty) {}
 ```
