@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--xtools2_universal_type_manager-->
-<!--DevOps Model RealTime 12.0.0-->
+<!--DevOps Model RealTime 12.0.1-->
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="RTist Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CppPropertySets="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:SketchNotation="http://www.ibm.com/ccl/soa/sketch/notation/1.0.0/" xmlns:UMLRealTime="http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:rtnotation="http://www.ibm.com/xtools/1.0.0/rtnotation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67 pathmap://CPP_LANGUAGE_PROFILE/CppPropertySets.epx#_5TYAwMk4EeO2m9WtkWjeeQ?CppPropertySets/CppPropertySets? http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default? http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119 pathmap://RT_PROPERTIES/UMLRealTime.epx#_3TUzoXq6Ed2hSeAAWZznoA?UMLRealTime/UMLRealTime?">
@@ -582,6 +582,18 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
 	return nullptr;&#xD;
 </body>
       </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_GBQOMN1KEe6dNYokfKuBhw" name="~GRPC_Server" specification="_DfqbMN1KEe6dNYokfKuBhw">
+        <language>C++</language>
+        <body>&#xD;
+	server.get()->Shutdown();&#xD;
+&#xD;
+	// Prevent the queueing of more requests&#xD;
+	cq.get()->Shutdown();&#xD;
+	// Drain the completion queue from active requests&#xD;
+	void* tag;&#xD;
+	bool ok;&#xD;
+	do {} while (cq.get()->Next(&amp;tag, &amp;ok));</body>
+      </ownedBehavior>
       <ownedOperation xmi:id="_WwyFsNR6Ee6fffW4TiqQOQ" name="initServer" visibility="private" method="_q9NtUNR7Ee6fffW4TiqQOQ"/>
       <ownedOperation xmi:id="_hXcLcNSzEe6fffW4TiqQOQ" name="registerServices" visibility="protected" isAbstract="true">
         <ownedParameter xmi:id="_ja4p4NSzEe6fffW4TiqQOQ" name="builder"/>
@@ -599,6 +611,7 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
         <ownedParameter xmi:id="_aUwhkduzEe6ci8V75dJNdw" name="id"/>
         <ownedParameter xmi:id="_aUwhktuzEe6ci8V75dJNdw" name="data" type="_Vv52kNsUEe61bMHC_7PK3Q" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:id="_DfqbMN1KEe6dNYokfKuBhw" name="~GRPC_Server" method="_GBQOMN1KEe6dNYokfKuBhw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_Rbp0QNIuEe6fffW4TiqQOQ" name="Maze">
       <eAnnotations xmi:id="_RbuswNIuEe6fffW4TiqQOQ" source="uml2.diagrams" references="_RbuswdIuEe6fffW4TiqQOQ">
@@ -812,11 +825,11 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
                       </children>
                       <styles xmi:type="notation:ShapeStyle" xmi:id="_y8Yf0d0tEe6ci8V75dJNdw" transparency="0" lineWidth="3" roundedBendpointsRadius="12"/>
                       <styles xmi:type="notation:LineTypeStyle" xmi:id="_y8Yf0t0tEe6ci8V75dJNdw"/>
-                      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_y8Yf090tEe6ci8V75dJNdw" figureOverride="1" figureImageURI="images/compass.png"/>
                       <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_y8Yf1N0tEe6ci8V75dJNdw"/>
                       <styles xmi:type="notation:TextStyle" xmi:id="_y8Yf1d0tEe6ci8V75dJNdw" textAlignment="Center"/>
                       <element xsi:nil="true"/>
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y8Yf1t0tEe6ci8V75dJNdw" x="8316" y="233" width="4442" height="4430"/>
+                      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_y8Yf090tEe6ci8V75dJNdw" figureOverride="1" figureImageURI="images/compass.png"/>
                     </children>
                   </children>
                   <children xmi:type="notation:ListCompartment" xmi:id="_K8F6ZNIvEe6fffW4TiqQOQ" type="InternalTransitionCompartment"/>
