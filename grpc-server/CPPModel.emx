@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--xtools2_universal_type_manager-->
-<!--DevOps Model RealTime 12.0.1-->
+<!--DevOps Model RealTime 12.0.0-->
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
 <?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="RTist Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CppPropertySets="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:SketchNotation="http://www.ibm.com/ccl/soa/sketch/notation/1.0.0/" xmlns:UMLRealTime="http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:rtnotation="http://www.ibm.com/xtools/1.0.0/rtnotation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67 pathmap://CPP_LANGUAGE_PROFILE/CppPropertySets.epx#_5TYAwMk4EeO2m9WtkWjeeQ?CppPropertySets/CppPropertySets? http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default? http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119 pathmap://RT_PROPERTIES/UMLRealTime.epx#_3TUzoXq6Ed2hSeAAWZznoA?UMLRealTime/UMLRealTime?">
@@ -827,9 +827,9 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
                       <styles xmi:type="notation:LineTypeStyle" xmi:id="_y8Yf0t0tEe6ci8V75dJNdw"/>
                       <styles xmi:type="notation:RoundedCornersStyle" xmi:id="_y8Yf1N0tEe6ci8V75dJNdw"/>
                       <styles xmi:type="notation:TextStyle" xmi:id="_y8Yf1d0tEe6ci8V75dJNdw" textAlignment="Center"/>
+                      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_y8Yf090tEe6ci8V75dJNdw" figureOverride="1" figureImageURI="compass.png"/>
                       <element xsi:nil="true"/>
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y8Yf1t0tEe6ci8V75dJNdw" x="8316" y="233" width="4442" height="4430"/>
-                      <styles xmi:type="SketchNotation:SketchStyle" xmi:id="_y8Yf090tEe6ci8V75dJNdw" figureOverride="1" figureImageURI="images/compass.png"/>
                     </children>
                   </children>
                   <children xmi:type="notation:ListCompartment" xmi:id="_K8F6ZNIvEe6fffW4TiqQOQ" type="InternalTransitionCompartment"/>
