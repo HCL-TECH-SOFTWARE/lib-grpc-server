@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+option objc_class_prefix = "MAZE";
+
+import "google/protobuf/empty.proto";
+
+package maze;
+
+// Service definition
+service MazeWalker {
+  // Send an event without data
+  rpc GoWest (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+  rpc GoEast (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+  rpc GoNorth (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+  rpc GoSouth (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+  // Send an event with data
+  rpc AdjustStepCount (AdjustStepCountRequest) returns (google.protobuf.Empty) {}
+
+  // Invoke an event with reply data
+  rpc StepCount (google.protobuf.Empty) returns (StepCountReply) {}
+
+  // Subscribe for outgoing event with data
+  rpc Subscribe_WrongWay (google.protobuf.Empty) returns (stream WrongWay) {}
+  rpc Subscribe_GoalReached (google.protobuf.Empty) returns (stream StepCountReply) {} // Messages can be "reused"
+
+  // Unsubscribe for outgoing event
+  rpc Unsubscribe_WrongWay (google.protobuf.Empty) returns (google.protobuf.Empty) {}
+}
+
+// Number of steps taken
+message StepCountReply {
+  int32 count = 1;
+}
+
+// Adjustment of the step counter
+message AdjustStepCountRequest {
+  int32 adjustment = 1;
+}
+
+// Outgoing event 
+message WrongWay {
+  string message = 1;
+}

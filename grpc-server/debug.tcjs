@@ -1,0 +1,5 @@
+let tc = TCF.define(TCF.CPP_TRANSFORM);
+tc.sources = [
+    
+];
+tc.topCapsule = 'platform:/resource/grpc-server/CPPModel.emx#_0cO3kNItEe6fffW4TiqQOQ';
