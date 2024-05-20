@@ -17,7 +17,7 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
 ## Build the client
 3. You need to build the client before the server since it contains the [.proto file](/grpc-client/proto/maze.proto) that describes the RPCs implemented by the server. This file is used both by the client and the server.
 
-   3.a. Windows:
+3.a. Windows:
 ```
 ..grpc-client> mkdir build
 ..grpc-client> cd build
@@ -25,9 +25,9 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
 ..grpc-client/build> cmake .. -G "Visual Studio 17 2022"
 ..grpc-client/build> cmake --build . --config Debug
 ```
- This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
+This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
 
-   3.b. Linux:
+3.b. Linux:
 ```
 ..grpc-client> mkdir build
 ..grpc-client> cd build
