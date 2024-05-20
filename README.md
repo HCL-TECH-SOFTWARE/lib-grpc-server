@@ -20,6 +20,7 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
 ```
 ..grpc-client> mkdir build
 ..grpc-client> cd build
+
 Windows:
 ..grpc-client/build> cmake .. -G "Visual Studio 17 2022"
 ..grpc-client/build> cmake --build . --config Debug
@@ -27,7 +28,6 @@ Windows:
 Linux:
 cmake .. -DCMAKE_INSTALL_PREFIX=GRPC Install location
 cmake --build . --config Debug
-
 ```
 
 This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
