@@ -27,6 +27,7 @@ under the License.
 
 
 #include "maze.grpc.pb.h"
+#include <condition_variable>     
 
 using grpc::Channel;
 using grpc::ClientContext;
@@ -227,7 +228,7 @@ public:
             std::cout << status.error_code() << ": " << status.error_message() << std::endl;
     }
 
-    std::atomic<bool> subscribed = false;
+    std::atomic<bool> subscribed;
 
 private:
     std::unique_ptr<MazeWalker::Stub> stub_;
