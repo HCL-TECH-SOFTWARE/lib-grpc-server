@@ -26,8 +26,8 @@ Windows:
 ..grpc-client/build> cmake --build . --config Debug
 
 Linux:
-cmake .. -DCMAKE_INSTALL_PREFIX=GRPC Install location
-cmake --build . --config Debug
+..grpc-client/build> cmake .. -DCMAKE_INSTALL_PREFIX=GRPC Install location
+..grpc-client/build> cmake --build . --config Debug
 ```
 
 This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
