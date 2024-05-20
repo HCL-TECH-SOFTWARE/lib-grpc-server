@@ -1,0 +1,156 @@
+/*
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.    
+*/
+
+let tc = TCF.define(TCF.CPP_TRANSFORM);
+// Where gRPC sources are located
+let grpcSourceLocation = '/home/pnplinuxadmin/grpc/grpc';
+// Where gRPC tools and libraries are installed
+let grpcInstallLocation = '/home/pnplinuxadmin/grpc/install';
+tc.sources = [
+    'platform:/resource/grpc-server/CPPModel.emx#_yhYUcNItEe6fffW4TiqQOQ',
+];
+tc.createTargetProject = true;
+tc.targetProject = 'grpc-server_target';
+tc.compilationMakeType = MakeType.GNU_make;
+tc.targetConfiguration = 'LinuxT.x64-gcc-12.x';
+tc.compilationMakeArguments = '';
+//tc.compileArguments = '$(DEBUG_TAG)';
+tc.inclusionPaths = [
+    grpcSourceLocation + '/include',
+    grpcSourceLocation + '/third_party/abseil-cpp',
+    grpcInstallLocation + '/include',
+    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build',
+];
+//tc.linkArguments = '/DEBUG';
+//tc.targetServicesLibrary = 'C:/TargetRTSUnzipped/TargetRTS';
+tc.threads = [
+{
+    name: 'MainThread',
+    implClass: 'RTPeerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_MAIN_PRIORITY'
+},
+{
+    name: 'TimerThread',
+    implClass: 'RTTimerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_TIMER_PRIORITY'
+},
+];
+tc.topCapsule = 'platform:/resource/grpc-server/CPPModel.emx#_0cO3kNItEe6fffW4TiqQOQ';
+tc.userLibraries = [
+    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build/libmaze_grpc_proto.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_parse.a',
+    grpcInstallLocation + '/lib/libgrpc++_reflection.a',
+    grpcInstallLocation + '/lib/libgrpc++.a',
+    grpcInstallLocation + '/lib64/libprotobuf.a',
+    grpcInstallLocation + '/lib/libgrpc.a',
+    grpcInstallLocation + '/lib/libupb_json_lib.a',
+    grpcInstallLocation + '/lib/libupb_textformat_lib.a',
+    grpcInstallLocation + '/lib/libupb_message_lib.a',
+    grpcInstallLocation + '/lib/libupb_base_lib.a',
+    grpcInstallLocation + '/lib/libupb_mem_lib.a',
+    grpcInstallLocation + '/lib/libutf8_range_lib.a',
+    grpcInstallLocation + '/lib64/libre2.a',
+    grpcInstallLocation + '/lib/libz.a',
+    grpcInstallLocation + '/lib64/libcares.a',
+    grpcInstallLocation + '/lib/libgpr.a',
+    grpcInstallLocation + '/lib64/libabsl_random_distributions.a',
+    grpcInstallLocation + '/lib64/libabsl_random_seed_sequences.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_pool_urbg.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_randen.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_randen_hwaes.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_randen_hwaes_impl.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_randen_slow.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_platform.a',
+    grpcInstallLocation + '/lib64/libabsl_random_internal_seed_material.a',
+    grpcInstallLocation + '/lib64/libabsl_random_seed_gen_exception.a',
+    grpcInstallLocation + '/lib/libssl.a',
+    grpcInstallLocation + '/lib/libcrypto.a',
+    grpcInstallLocation + '/lib/libaddress_sorting.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_check_op.a',
+    grpcInstallLocation + '/lib64/libabsl_leak_check.a',
+    grpcInstallLocation + '/lib64/libabsl_die_if_null.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_conditions.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_message.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_nullguard.a',
+    grpcInstallLocation + '/lib64/libabsl_examine_stack.a',
+	grpcInstallLocation + '/lib64/libabsl_log_internal_format.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_proto.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_log_sink_set.a',
+    grpcInstallLocation + '/lib64/libabsl_log_sink.a',
+    grpcInstallLocation + '/lib64/libabsl_log_entry.a',
+    grpcInstallLocation + '/lib64/libabsl_log_initialize.a',
+    grpcInstallLocation + '/lib64/libabsl_log_globals.a',
+    grpcInstallLocation + '/lib64/libabsl_vlog_config_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_fnmatch.a',
+    grpcInstallLocation + '/lib64/libabsl_log_internal_globals.a',
+    grpcInstallLocation + '/lib64/libabsl_statusor.a',
+    grpcInstallLocation + '/lib64/libabsl_status.a',
+    grpcInstallLocation + '/lib64/libabsl_strerror.a',
+    grpcInstallLocation + '/lib64/libutf8_validity.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_usage.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_usage_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_marshalling.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_reflection.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_config.a',
+    grpcInstallLocation + '/lib64/libabsl_cord.a',
+    grpcInstallLocation + '/lib64/libabsl_cordz_info.a',
+    grpcInstallLocation + '/lib64/libabsl_cord_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_cordz_functions.a',
+    grpcInstallLocation + '/lib64/libabsl_cordz_handle.a',
+    grpcInstallLocation + '/lib64/libabsl_crc_cord_state.a',
+    grpcInstallLocation + '/lib64/libabsl_crc32c.a',
+    grpcInstallLocation + '/lib64/libabsl_str_format_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_crc_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_crc_cpu_detect.a',
+    grpcInstallLocation + '/lib64/libabsl_raw_hash_set.a',
+    grpcInstallLocation + '/lib64/libabsl_hash.a',
+    grpcInstallLocation + '/lib64/libabsl_bad_variant_access.a',
+    grpcInstallLocation + '/lib64/libabsl_city.a',
+    grpcInstallLocation + '/lib64/libabsl_low_level_hash.a',
+    grpcInstallLocation + '/lib64/libabsl_hashtablez_sampler.a',
+    grpcInstallLocation + '/lib64/libabsl_exponential_biased.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_private_handle_accessor.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_commandlineflag.a',
+    grpcInstallLocation + '/lib64/libabsl_bad_optional_access.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_commandlineflag_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_flags_program_name.a',
+    grpcInstallLocation + '/lib64/libabsl_synchronization.a',
+    grpcInstallLocation + '/lib64/libabsl_graphcycles_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_kernel_timeout_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_time.a',
+    grpcInstallLocation + '/lib64/libabsl_civil_time.a',
+    grpcInstallLocation + '/lib64/libabsl_time_zone.a',
+    grpcInstallLocation + '/lib64/libabsl_stacktrace.a',
+    grpcInstallLocation + '/lib64/libabsl_symbolize.a',
+    grpcInstallLocation + '/lib64/libabsl_strings.a',
+    grpcInstallLocation + '/lib64/libabsl_strings_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_string_view.a',
+    grpcInstallLocation + '/lib64/libabsl_int128.a',
+    grpcInstallLocation + '/lib64/libabsl_throw_delegate.a',
+    grpcInstallLocation + '/lib64/libabsl_malloc_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_debugging_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_demangle_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_base.a',
+    grpcInstallLocation + '/lib64/libabsl_raw_logging_internal.a',
+    grpcInstallLocation + '/lib64/libabsl_log_severity.a',
+    grpcInstallLocation + '/lib64/libabsl_spinlock_wait.a',
+];
