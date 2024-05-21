@@ -1,23 +1,23 @@
-# gRPC Sample
-[gRPC](https://grpc.io/) is a Remote Procedure Call (RPC) framework for building systems of distributed applications in heterogeneous environments. This sample shows how you can use it in applications created with [DevOps Model RealTime](https://www.hcl-software.com/devops-model-realtime).
+# gRPC Library and Sample
+[gRPC](https://grpc.io/) is a Remote Procedure Call (RPC) framework for building systems of distributed applications in heterogeneous environments. This repository contains a [model library](/grpc-server-lib) that allows you to use gRPC in applications created with [DevOps Model RealTime](https://www.hcl-software.com/devops-model-realtime).
 
-This sample contains a [gRPC server](/grpc-server) (implemented with Model RealTime) and a [gRPC client](/grpc-client) (implemented as a C++ command-line application).
+The repository also contains a sample [gRPC server](/grpc-server) (implemented with Model RealTime and using the model library) and [gRPC client](/grpc-client) (implemented as a C++ command-line application).
 
 ## Preparations
 1. Download, build and install gRPC
 
 Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/cpp/quickstart/) to install required build tools, clone the [gRPC GitHub repo](https://github.com/grpc/grpc), build gRPC from its source code and install the gRPC tools and libraries. Windows users can find more detailed instructions [here](https://github.com/grpc/grpc/blob/v1.61.0/BUILDING.md).
 
-**NOTE 1:** The sample is by default configured to be built with Visual Studio 17 (2022) using cmake for Win64 Debug. If you want to use a different compiler, target platform or build configuration you must adjust arguments to cmake when building gRPC. You then also must update the TC in the server project and use an appropriate cmake generator for building the client accordingly. The further steps assume you have the correct build tools in the path (for Visual Studio this is best accomplished by using a Visual Studio command prompt).
+**NOTE 1:** The library and the sample are by default configured to be built with Visual Studio 17 (2022) using cmake for Win64 Debug. Transformation configurations for building with gcc 12 on Linux are also provided. If you want to use a different compiler, target platform or build configuration you must adjust arguments to cmake when building gRPC. You then also must update the TCs (or create new TCs) and use an appropriate cmake generator for building the client accordingly. The further steps assume you have the correct build tools in the path (for Visual Studio this is best accomplished by using a Visual Studio command prompt).
 
-**NOTE 2:** If you go with the default build configuration you should also build the TargetRTS with the same settings. Follow [these steps](https://model-realtime.hcldoc.com/help/topic/com.ibm.xtools.rsarte.webdoc/Articles/Running%20and%20debugging/Debugging%20the%20RT%20services%20library.html?cp=23_2_13_1). In addition, set the `/MDd` flag in `LIBSETCCFLAGS` when you edit `libset.mk` before building it.
- 
+**NOTE 2:** Windows users that go with the default build configuration should also build the TargetRTS with the same settings. Follow [these steps](https://model-realtime.hcldoc.com/help/topic/com.ibm.xtools.rsarte.webdoc/Articles/Running%20and%20debugging/Debugging%20the%20RT%20services%20library.html?cp=23_2_13_1). In addition, set the `/MDd` flag in `LIBSETCCFLAGS` when editing `libset.mk` before building it (to use the debug version of C run-time library). The default build configuration for Linux uses the default TargetRTS and therefore builds without debug symbols.
+
 2. Add the location where you installed the gRPC tools to your PATH environment variable
 
 ## Build the client
 3. You need to build the client before the server since it contains the [.proto file](/grpc-client/proto/maze.proto) that describes the RPCs implemented by the server. This file is used both by the client and the server.
 
-    3.a. Windows:
+    a. Windows:
     ```
     ..grpc-client> mkdir build
     ..grpc-client> cd build
@@ -26,7 +26,7 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
     ```
     This will generate a Visual Studio solution file (`MazeWalker.sln`) which you can use for debugging the client application.
 
-	3.b. Linux:
+	  b. Linux:
     
     ```
     ..grpc-client> mkdir build
@@ -36,10 +36,10 @@ Follow the steps in the [gRPC QuickStart guide](https://grpc.io/docs/languages/c
     ```
 
 ## Build the server
-4. Open the [gRPC server](/grpc-server) project in Model RealTime.
-5. Open the TC file [`server.tcjs`](/grpc-server/server.tcjs) and edit the variables in the beginning of the file that specify the location where you placed the gRPC source code (`grpcSourceLocation`) and where you installed the gRPC tools and libraries (`grpcInstallLocation`).
-6. Also edit the `targetServicesLibrary` property to specify the path to the TargetRTS to use. If you want to use the default TargetRTS that comes with Model RealTime, you can delete this property, but remember that with that version you cannot debug. Other properties that have to be modified depending on if you want to debug or not (and which compiler that is used) are `compileArguments` and `linkArguments`. By default they are set so you can debug with Visual Studio.
-7. Build the TC.
+4. Open the [gRPC server](/grpc-server) project in Model RealTime. It uses the [gRPC model library](/grpc-server-lib) so import that project too into your workspace.
+5. Open the TC file ([`server.tcjs`](/grpc-server/server.tcjs) or [`Linux_server.tcjs`](/grpc-server/Linux_server.tcjs)) and edit the variables in the beginning of the file that specify the location where you placed the gRPC source code (`grpcSourceLocation`) and where you installed the gRPC tools and libraries (`grpcInstallLocation`). See also comments in the TC for paths that you may have to update to match your environment.
+6. If needed also edit the `targetServicesLibrary` property to specify the path to the TargetRTS to use. If you want to use the default TargetRTS that comes with Model RealTime, you can delete this property, but remember that with that version you cannot debug. Other properties that have to be modified depending on if you want to debug or not (and which compiler that is used) are `compileArguments` and `linkArguments`. By default they are set so you can debug with Visual Studio (the Linux TC by default does not build for debug).
+7. Build the TC. It will first build the prerequisite [gRPC library](/grpc-server-lib) and then the server executable. Note that the TC for building the library is set-up to be built as a prerequisite of an executable TC. If you want to build the library TC by itself, you need to update it first (or create another TC).
 
 ## Run the sample
 The sample application is about walking a maze represented with a state machine in the `Maze` capsule. From a state in the maze you can either go east, west, north or south. Valid paths are represented by transitions. If you find your way out of the maze (not very hard) you reach the goal.
@@ -59,12 +59,21 @@ Finally launch the client executable `maze_client.exe` that was built previously
 * **unsubscribe** Unsubscribe from the notifications about taking the wrong way in the maze
 * **exit** Terminate the client
 
-**NOTE:** The client and server communicate on port 50051 on localhost (i.e. you must run them on the same machine). You can change the port and hostname by means of the `--target` command-line argument for the client. However, the same is currently hardcoded in the server (set the default value of `GRPC_Server::port`).
+**NOTE:** The client and server by default communicate on port 50051 on localhost (i.e. you must run them on the same machine). You can change the port and hostname by means of the `--target` command-line argument for the client, and by means of the `-port` command-line argument for the server.
 
-For example, to connect to the server running on a different machine and on a different port:
+For example, to connect to the server running on a different machine and on a different port, first start the server on the remote machine like this:
+
+```
+maze_server.exe -port=50052
+```
+
+and then start the client like this:
+
 ```
 maze_client.exe --target 172.27.223.1:50052
 ```
+
+replacing 172.27.223.1 with the IP address of the machine where the server is running.
 
 ## How the sample works
 Refer to the [.proto file](/grpc-client/proto/maze.proto) and the picture below to understand how the sample works:
