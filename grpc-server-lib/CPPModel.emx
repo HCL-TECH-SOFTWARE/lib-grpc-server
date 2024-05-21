@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<!--DevOps Model RealTime 12.0.1-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="RTist Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CppPropertySets="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67" xmlns:Default="http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2" xmlns:UMLRealTime="http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xsi:schemaLocation="http:///schemas/CppPropertySets/_5TG7AMk4EeO2m9WtkWjeeQ/67 pathmap://CPP_LANGUAGE_PROFILE/CppPropertySets.epx#_5TYAwMk4EeO2m9WtkWjeeQ?CppPropertySets/CppPropertySets? http:///schemas/Default/_fNm3AAqoEd6-N_NOT9vsCA/2 pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default? http:///schemas/UMLRealTime/_3TUzoHq6Ed2hSeAAWZznoA/119 pathmap://RT_PROPERTIES/UMLRealTime.epx#_3TUzoXq6Ed2hSeAAWZznoA?UMLRealTime/UMLRealTime?">
+  <uml:Package xmi:id="_t-llQBa2Ee-0aYJ09xTKqw" name="GRPC_Lib">
+    <eAnnotations xmi:id="_t-mMUBa2Ee-0aYJ09xTKqw" source="uml2.diagrams" references="_t-mMURa2Ee-0aYJ09xTKqw">
+      <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_t-mMURa2Ee-0aYJ09xTKqw" type="Class" name="Main">
+        <element xsi:nil="true"/>
+      </contents>
+    </eAnnotations>
+    <eAnnotations xmi:id="_t-mMUha2Ee-0aYJ09xTKqw" source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+      <details xmi:id="_t-mMUxa2Ee-0aYJ09xTKqw" key="umldt.rt.activity" value="2"/>
+      <details xmi:id="_t-mMVBa2Ee-0aYJ09xTKqw" key="umldt.activity" value="2"/>
+      <details xmi:id="_t-mMVRa2Ee-0aYJ09xTKqw" key="uml.rt.activity" value="2"/>
+      <details xmi:id="_t-mMVha2Ee-0aYJ09xTKqw" key="com.ibm.xtools.activities.cppModelingActivity" value="1"/>
+    </eAnnotations>
+    <packageImport xmi:id="_t-mMVxa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMWBa2Ee-0aYJ09xTKqw" source="RSA_ElementImport"/>
+      <importedPackage xmi:type="uml:Model" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/RTClasses.emx#_1MnNgJwwEdu4wYUZIlQWkw?RTClasses?"/>
+    </packageImport>
+    <packageImport xmi:id="_t-mMWRa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMWha2Ee-0aYJ09xTKqw" source="RSA_ElementImport"/>
+      <importedPackage xmi:type="uml:Model" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_f0875BKyEdyaM9S2zG4bgA?CppPrimitiveDatatypes?"/>
+    </packageImport>
+    <packageImport xmi:id="_t-mMWxa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMXBa2Ee-0aYJ09xTKqw" source="RSA_ElementImport"/>
+      <importedPackage xmi:type="uml:Model" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/RTComponents.emx#__QdLdUB2PEd2Vrcc_Gxok_A37F129B1035A?RTComponents?"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vaY_cBa3Ee-0aYJ09xTKqw" name="GRPC_Server" clientDependency="_ADAXgBa4Ee-0aYJ09xTKqw _ChS-4Ba4Ee-0aYJ09xTKqw" isAbstract="true">
+      <eAnnotations xmi:id="_vaY_cRa3Ee-0aYJ09xTKqw" source="uml2.diagrams" references="_vaY_cha3Ee-0aYJ09xTKqw">
+        <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_vaY_cha3Ee-0aYJ09xTKqw" type="Structure" element="_vaY_cBa3Ee-0aYJ09xTKqw" measurementUnit="Himetric">
+          <children xmi:type="umlnotation:UMLShape" xmi:id="_vaY_cxa3Ee-0aYJ09xTKqw" type="StructureDiagramFrame" element="_vaY_cBa3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+            <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_vaY_dBa3Ee-0aYJ09xTKqw" type="StructureCompartment"/>
+            <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaY_dRa3Ee-0aYJ09xTKqw" type="Name"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaY_dha3Ee-0aYJ09xTKqw" x="635" y="635"/>
+          </children>
+        </contents>
+      </eAnnotations>
+      <ownedAttribute xmi:id="_vaY_dxa3Ee-0aYJ09xTKqw" name="port" visibility="protected">
+        <eAnnotations xmi:id="_vaY_eBa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaY_eRa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+        <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mElIYBdAEe-0aYJ09xTKqw" name="">
+          <language>C++</language>
+          <body>0</body>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vaY_exa3Ee-0aYJ09xTKqw" name="cq" visibility="protected" aggregation="composite">
+        <eAnnotations xmi:id="_vaY_fBa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaY_fRa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vaY_fha3Ee-0aYJ09xTKqw" name="job" visibility="private">
+        <eAnnotations xmi:id="_vaY_fxa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaY_gBa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vaY_gRa3Ee-0aYJ09xTKqw" name="server" visibility="private" aggregation="composite">
+        <eAnnotations xmi:id="_vaY_gha3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaZmgBa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_vaZmgRa3Ee-0aYJ09xTKqw" name="external" aggregation="composite" isBehavior="true">
+        <type xmi:type="uml:Collaboration" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/RTClasses.emx#_17NVsrIlEduJc5NEaBCMOw?RTClasses/External/External?"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vaZmgha3Ee-0aYJ09xTKqw" name="subscriptionsForOutgoingEvents" visibility="private" aggregation="composite">
+        <eAnnotations xmi:id="_vaZmgxa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaZmhBa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vaZmhRa3Ee-0aYJ09xTKqw" name="subscriptionMutex" visibility="private" aggregation="composite">
+        <eAnnotations xmi:id="_vaZmhha3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_vaZmhxa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_wtaIQBdAEe-0aYJ09xTKqw" name="logToStdOut" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_f0875RKyEdyaM9S2zG4bgA?CppPrimitiveDatatypes/bool?"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_wtaIQRdAEe-0aYJ09xTKqw" value="true">
+          <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_f0875RKyEdyaM9S2zG4bgA?CppPrimitiveDatatypes/bool?"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_vaZmiBa3Ee-0aYJ09xTKqw" name="State Machine">
+        <eAnnotations xmi:id="_vaZmiRa3Ee-0aYJ09xTKqw" source="uml2.diagrams" references="_vaZmiha3Ee-0aYJ09xTKqw">
+          <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_vaZmiha3Ee-0aYJ09xTKqw" type="Statechart" element="_vaZmiBa3Ee-0aYJ09xTKqw" measurementUnit="Himetric">
+            <children xmi:type="umlnotation:UMLFrame" xmi:id="_vaZmixa3Ee-0aYJ09xTKqw" type="Statemachine" element="_vaZmiBa3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" fillColor="16250871" transparency="0" lineColor="12632258" lineWidth="1" showStereotype="Label" alignment="Horizontal">
+              <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_vaZmjBa3Ee-0aYJ09xTKqw" type="Region" element="_vaZmsRa3Ee-0aYJ09xTKqw" verticalAlignment="false">
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_vaZmjRa3Ee-0aYJ09xTKqw" element="_vaZmsha3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Label">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_vaZmjha3Ee-0aYJ09xTKqw" type="NameLabel">
+                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmjxa3Ee-0aYJ09xTKqw" type="Stereotype"/>
+                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmkBa3Ee-0aYJ09xTKqw" type="Name"/>
+                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmkRa3Ee-0aYJ09xTKqw" type="Parent"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmkha3Ee-0aYJ09xTKqw" y="-149"/>
+                  </children>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmkxa3Ee-0aYJ09xTKqw" x="1025" y="233"/>
+                </children>
+                <children xmi:type="umlnotation:UMLShape" xmi:id="_vaZmlBa3Ee-0aYJ09xTKqw" element="_vaZmsxa3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+                  <children xmi:type="notation:DecorationNode" xmi:id="_vaZmlRa3Ee-0aYJ09xTKqw" type="ImageCompartment">
+                    <layoutConstraint xmi:type="notation:Size" xmi:id="_vaZmlha3Ee-0aYJ09xTKqw" width="1320" height="1320"/>
+                  </children>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmlxa3Ee-0aYJ09xTKqw" type="Stereotype"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmmBa3Ee-0aYJ09xTKqw" type="Name"/>
+                  <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmmRa3Ee-0aYJ09xTKqw" type="Parent"/>
+                  <children xmi:type="notation:ListCompartment" xmi:id="_vaZmmha3Ee-0aYJ09xTKqw" visible="false" type="Activities"/>
+                  <children xmi:type="notation:ListCompartment" xmi:id="_vaZmmxa3Ee-0aYJ09xTKqw" visible="false" type="InternalTransitionCompartment"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmnBa3Ee-0aYJ09xTKqw" y="1693" height="1396"/>
+                </children>
+              </children>
+              <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmnRa3Ee-0aYJ09xTKqw" type="Name"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmnha3Ee-0aYJ09xTKqw" x="635" y="635"/>
+            </children>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_vaZmnxa3Ee-0aYJ09xTKqw" element="_vaZmtRa3Ee-0aYJ09xTKqw" source="_vaZmjRa3Ee-0aYJ09xTKqw" target="_vaZmlBa3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_vaZmoBa3Ee-0aYJ09xTKqw" type="TransitionLabelCompartment">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmoRa3Ee-0aYJ09xTKqw" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmoha3Ee-0aYJ09xTKqw" type="TransitionLabel"/>
+                <children xmi:type="notation:ListCompartment" xmi:id="_vaZmoxa3Ee-0aYJ09xTKqw" type="Triggers"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmpBa3Ee-0aYJ09xTKqw" y="-149"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vaZmpRa3Ee-0aYJ09xTKqw" points="[-3, -13, -3, -13]$[-3, -13, -3, -13]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vaZmpha3Ee-0aYJ09xTKqw" id="(0.4988179669030733,1.0)"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vaZmpxa3Ee-0aYJ09xTKqw" id="(0.4552023121387283,0.1840974212034384)"/>
+            </edges>
+            <edges xmi:type="umlnotation:UMLConnector" xmi:id="_vaZmqBa3Ee-0aYJ09xTKqw" element="_vaZmuRa3Ee-0aYJ09xTKqw" source="_vaZmlBa3Ee-0aYJ09xTKqw" target="_vaZmlBa3Ee-0aYJ09xTKqw" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
+              <children xmi:type="notation:DecorationNode" xmi:id="_vaZmqRa3Ee-0aYJ09xTKqw" type="TransitionLabelCompartment">
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmqha3Ee-0aYJ09xTKqw" type="Stereotype"/>
+                <children xmi:type="notation:BasicDecorationNode" xmi:id="_vaZmqxa3Ee-0aYJ09xTKqw" type="TransitionLabel"/>
+                <children xmi:type="notation:ListCompartment" xmi:id="_vaZmrBa3Ee-0aYJ09xTKqw" type="Triggers"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vaZmrRa3Ee-0aYJ09xTKqw" x="-68" y="1390"/>
+              </children>
+              <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vaZmrha3Ee-0aYJ09xTKqw" points="[0, 0, -157, 275]$[157, -275, 0, 0]"/>
+              <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vaZmrxa3Ee-0aYJ09xTKqw" id="(0.9219653179190751,0.6389684813753582)"/>
+              <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vaZmsBa3Ee-0aYJ09xTKqw" id="(0.990606936416185,0.27507163323782235)"/>
+            </edges>
+          </contents>
+        </eAnnotations>
+        <region xmi:id="_vaZmsRa3Ee-0aYJ09xTKqw" name="Region1">
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_vaZmsha3Ee-0aYJ09xTKqw"/>
+          <subvertex xmi:type="uml:State" xmi:id="_vaZmsxa3Ee-0aYJ09xTKqw" name="WaitForRequest">
+            <entry xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmtBa3Ee-0aYJ09xTKqw" name="Entry">
+              <language>C++</language>
+              <body>external.enable();</body>
+            </entry>
+          </subvertex>
+          <transition xmi:id="_vaZmtRa3Ee-0aYJ09xTKqw" name="Initial" source="_vaZmsha3Ee-0aYJ09xTKqw" target="_vaZmsxa3Ee-0aYJ09xTKqw">
+            <eAnnotations xmi:id="_vaZmtha3Ee-0aYJ09xTKqw" source="uml2.alias">
+              <details xmi:id="_vaZmtxa3Ee-0aYJ09xTKqw" key="Initial"/>
+            </eAnnotations>
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmuBa3Ee-0aYJ09xTKqw" name="Effect">
+              <language>C++</language>
+              <body>initServer();</body>
+            </effect>
+          </transition>
+          <transition xmi:id="_vaZmuRa3Ee-0aYJ09xTKqw" name="requestReceived" source="_vaZmsxa3Ee-0aYJ09xTKqw" target="_vaZmsxa3Ee-0aYJ09xTKqw">
+            <effect xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmuha3Ee-0aYJ09xTKqw" name="Effect">
+              <language>C++</language>
+              <body>if (logToStdOut)&#xD;
+	std::cout &lt;&lt; &quot;Request received&quot; &lt;&lt; std::endl;&#xD;
+&#xD;
+// Process all available external data&#xD;
+unsigned int remaining;&#xD;
+do {&#xD;
+	CallData* request;&#xD;
+	remaining = external.dataPopFront((void**) &amp;request);&#xD;
+&#xD;
+	if (request == nullptr)&#xD;
+		break; // No more data available&#xD;
+&#xD;
+	request->proceed();&#xD;
+&#xD;
+	// No need to delete the request here, since it's automatically deleted when processed&#xD;
+}&#xD;
+while (remaining > 0);&#xD;
+&#xD;
+if (logToStdOut)&#xD;
+	std::cout &lt;&lt; &quot;Request processed&quot; &lt;&lt; std::endl;</body>
+            </effect>
+            <trigger xmi:id="_vaZmuxa3Ee-0aYJ09xTKqw" name="" port="_vaZmgRa3Ee-0aYJ09xTKqw">
+              <event xmi:type="uml:CallEvent" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/RTClasses.emx#_17fplbIlEduJc5NEaBCMOw?RTClasses/External/event?"/>
+            </trigger>
+          </transition>
+        </region>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmvBa3Ee-0aYJ09xTKqw" name="initServer" specification="_vaZmwRa3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>if (port == 0) {&#xD;
+	// Read port from command-line&#xD;
+	port = 50051; // Default&#xD;
+	int ac = RTMain::argCount();&#xD;
+	const char * const * av = RTMain::argStrings();&#xD;
+	while( --ac > 0 ) {&#xD;
+		const char* arg = *++av;&#xD;
+		if( RTMemoryUtil::strcmp( arg, &quot;-port=&quot;, 6 ) == 0 )&#xD;
+			port = RTMemoryUtil::atoi(*av + 6);&#xD;
+	}&#xD;
+}&#xD;
+&#xD;
+std::string server_address = absl::StrFormat(&quot;0.0.0.0:%d&quot;, port);&#xD;
+&#xD;
+grpc::EnableDefaultHealthCheckService(true);&#xD;
+grpc::reflection::InitProtoReflectionServerBuilderPlugin();&#xD;
+ServerBuilder builder;&#xD;
+// Listen on the given address without any authentication mechanism.&#xD;
+builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());&#xD;
+&#xD;
+// Register services that clients need to access through this gRPC server&#xD;
+registerServices(builder);&#xD;
+&#xD;
+// Get hold of the completion queue used for the asynchronous communication&#xD;
+// with the gRPC runtime.&#xD;
+cq = builder.AddCompletionQueue();&#xD;
+&#xD;
+// Finally assemble the server.&#xD;
+server = builder.BuildAndStart();&#xD;
+if (logToStdOut)&#xD;
+	std::cout &lt;&lt; &quot;gRPC server listening on &quot; &lt;&lt; server_address &lt;&lt; std::endl;&#xD;
+&#xD;
+// Launch server thread&#xD;
+job = new ServerJob(this);&#xD;
+RTThread* serverThread = new RTThread(job, 20000 /* stack size */);</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmvRa3Ee-0aYJ09xTKqw" name="subscribe" specification="_vaZmxRa3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>	std::lock_guard&lt;std::mutex> guard(subscriptionMutex);&#xD;
+	auto s = subscriptionsForOutgoingEvents.find(id);&#xD;
+&#xD;
+	if (s != subscriptionsForOutgoingEvents.end()) {&#xD;
+		// A subscribe data for this id was already present. Delete it.&#xD;
+		delete s->second;&#xD;
+	}&#xD;
+&#xD;
+subscriptionsForOutgoingEvents[id] = data;&#xD;
+</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmvha3Ee-0aYJ09xTKqw" name="unsubscribe" specification="_vaZmyBa3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>	std::lock_guard&lt;std::mutex> guard(subscriptionMutex);&#xD;
+&#xD;
+	auto s = subscriptionsForOutgoingEvents.find(id);&#xD;
+	if (s != subscriptionsForOutgoingEvents.end()) {&#xD;
+		SubscribeData* data = s->second;&#xD;
+		subscriptionsForOutgoingEvents.erase(s);&#xD;
+		return data;&#xD;
+	}&#xD;
+&#xD;
+	return nullptr;&#xD;
+</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmvxa3Ee-0aYJ09xTKqw" name="getSubscription" specification="_vaZmyxa3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>	std::lock_guard&lt;std::mutex> guard(subscriptionMutex);&#xD;
+	auto s = subscriptionsForOutgoingEvents.find(id);&#xD;
+&#xD;
+	if (s != subscriptionsForOutgoingEvents.end()) {&#xD;
+		return s->second;&#xD;
+	}&#xD;
+&#xD;
+	return nullptr;&#xD;
+</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vaZmwBa3Ee-0aYJ09xTKqw" name="~GRPC_Server" specification="_vaZmzha3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>&#xD;
+	server.get()->Shutdown();&#xD;
+&#xD;
+	// Prevent the queueing of more requests&#xD;
+	cq.get()->Shutdown();&#xD;
+	// Drain the completion queue from active requests&#xD;
+	void* tag;&#xD;
+	bool ok;&#xD;
+	do {} while (cq.get()->Next(&amp;tag, &amp;ok));</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_vaZmwRa3Ee-0aYJ09xTKqw" name="initServer" visibility="protected" method="_vaZmvBa3Ee-0aYJ09xTKqw">
+        <ownedComment xmi:id="_I_WCIBdBEe-0aYJ09xTKqw" annotatedElement="_vaZmwRa3Ee-0aYJ09xTKqw">
+          <body>&lt;p>Initialize the gRPC server. The default implementation reads the port from a -port command-line argument. Override to customize the initialization, for example to obtain the port in some other way.&lt;/p></body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vaZmwha3Ee-0aYJ09xTKqw" name="registerServices" visibility="protected" isAbstract="true">
+        <ownedParameter xmi:id="_vaZmwxa3Ee-0aYJ09xTKqw" name="builder"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vaZmxBa3Ee-0aYJ09xTKqw" name="createCallDatas" visibility="protected" isAbstract="true"/>
+      <ownedOperation xmi:id="_vaZmxRa3Ee-0aYJ09xTKqw" name="subscribe" visibility="protected" method="_vaZmvRa3Ee-0aYJ09xTKqw">
+        <ownedParameter xmi:id="_vaZmxha3Ee-0aYJ09xTKqw" name="id"/>
+        <ownedParameter xmi:id="_vaZmxxa3Ee-0aYJ09xTKqw" name="data"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vaZmyBa3Ee-0aYJ09xTKqw" name="unsubscribe" visibility="protected" method="_vaZmvha3Ee-0aYJ09xTKqw">
+        <ownedParameter xmi:id="_vaZmyRa3Ee-0aYJ09xTKqw" name="id"/>
+        <ownedParameter xmi:id="_vaZmyha3Ee-0aYJ09xTKqw" name="data" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vaZmyxa3Ee-0aYJ09xTKqw" name="getSubscription" visibility="protected" method="_vaZmvxa3Ee-0aYJ09xTKqw">
+        <ownedParameter xmi:id="_vaZmzBa3Ee-0aYJ09xTKqw" name="id"/>
+        <ownedParameter xmi:id="_vaZmzRa3Ee-0aYJ09xTKqw" name="data" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_vaZmzha3Ee-0aYJ09xTKqw" name="~GRPC_Server" method="_vaZmwBa3Ee-0aYJ09xTKqw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0sVaMBa3Ee-0aYJ09xTKqw" name="CallData">
+      <ownedAttribute xmi:id="_0sVaMRa3Ee-0aYJ09xTKqw" name="cq_" visibility="protected">
+        <eAnnotations xmi:id="_0sVaMha3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_0sVaMxa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0sVaNBa3Ee-0aYJ09xTKqw" name="ctx_" visibility="protected">
+        <eAnnotations xmi:id="_0sVaNRa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_0sVaNha3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_0sVaNxa3Ee-0aYJ09xTKqw" name="status_" visibility="private" type="_0sVaPBa3Ee-0aYJ09xTKqw">
+        <eAnnotations xmi:id="_0sVaOBa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_0sVaORa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sVaOha3Ee-0aYJ09xTKqw" name="proceed" specification="_0sVaQha3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>if (status_ == CREATE) {&#xD;
+	// Make this instance progress to the PROCESS state.&#xD;
+    status_ = PROCESS;&#xD;
+&#xD;
+    // As part of the initial CREATE state, we *request* that the system&#xD;
+    // start processing SayHello requests. In this request, &quot;this&quot; acts are&#xD;
+    // the tag uniquely identifying the request (so that different CallData&#xD;
+    // instances can serve different requests concurrently), in this case&#xD;
+    // the memory address of this CallData instance.&#xD;
+    startRequest();&#xD;
+}&#xD;
+else if (status_ == PROCESS) {&#xD;
+    // Spawn a new CallData instance to serve new clients while we process&#xD;
+    // the one for this CallData. The instance will deallocate itself as&#xD;
+    // part of its FINISH state.&#xD;
+    newCallData();&#xD;
+&#xD;
+    completeRequest();&#xD;
+    status_ = FINISH;&#xD;
+}&#xD;
+else {&#xD;
+    GPR_ASSERT(status_ == FINISH);&#xD;
+    // Once in the FINISH state, deallocate ourselves (CallData).&#xD;
+    onFinished();&#xD;
+}</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sVaOxa3Ee-0aYJ09xTKqw" name="onFinished" specification="_0sVaRha3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>delete this;</body>
+      </ownedBehavior>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_0sVaPBa3Ee-0aYJ09xTKqw" name="CallStatus">
+        <ownedLiteral xmi:id="_0sVaPRa3Ee-0aYJ09xTKqw" name="CREATE" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
+        <ownedLiteral xmi:id="_0sVaPha3Ee-0aYJ09xTKqw" name="PROCESS" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
+        <ownedLiteral xmi:id="_0sVaPxa3Ee-0aYJ09xTKqw" name="FINISH" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
+      </nestedClassifier>
+      <ownedOperation xmi:id="_0sVaQBa3Ee-0aYJ09xTKqw" name="CallData">
+        <ownedParameter xmi:id="_0sVaQRa3Ee-0aYJ09xTKqw" name="cq"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0sVaQha3Ee-0aYJ09xTKqw" name="proceed" method="_0sVaOha3Ee-0aYJ09xTKqw"/>
+      <ownedOperation xmi:id="_0sVaQxa3Ee-0aYJ09xTKqw" name="startRequest" isAbstract="true"/>
+      <ownedOperation xmi:id="_0sVaRBa3Ee-0aYJ09xTKqw" name="newCallData" isAbstract="true"/>
+      <ownedOperation xmi:id="_0sVaRRa3Ee-0aYJ09xTKqw" name="completeRequest" isAbstract="true"/>
+      <ownedOperation xmi:id="_0sVaRha3Ee-0aYJ09xTKqw" name="onFinished" method="_0sVaOxa3Ee-0aYJ09xTKqw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0sXPYBa3Ee-0aYJ09xTKqw" name="SubscribeData">
+      <generalization xmi:id="_0sXPYRa3Ee-0aYJ09xTKqw" general="_0sVaMBa3Ee-0aYJ09xTKqw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sXPYha3Ee-0aYJ09xTKqw" name="onFinished" specification="_0sXPYxa3Ee-0aYJ09xTKqw">
+        <language>C++</language>
+        <body>// Do not delete when the request has completed since the object should be kept alive&#xD;
+// as long as the subscription is active.</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_0sXPYxa3Ee-0aYJ09xTKqw" name="onFinished" method="_0sXPYha3Ee-0aYJ09xTKqw">
+        <eAnnotations xmi:id="_0sXPZBa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
+          <details xmi:id="_0sXPZRa3Ee-0aYJ09xTKqw" key="cpp/overrideFunction/java.lang.Boolean" value="true"/>
+        </eAnnotations>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0sXPZha3Ee-0aYJ09xTKqw" name="SubscribeData">
+        <ownedParameter xmi:id="_0sXPZxa3Ee-0aYJ09xTKqw" name="cq"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0sXPaBa3Ee-0aYJ09xTKqw" name="unsubscribe" isAbstract="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ADAXgBa4Ee-0aYJ09xTKqw" name="" supplier="_0sVaMBa3Ee-0aYJ09xTKqw" client="_vaY_cBa3Ee-0aYJ09xTKqw"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ChS-4Ba4Ee-0aYJ09xTKqw" name="" supplier="_0sXPYBa3Ee-0aYJ09xTKqw" client="_vaY_cBa3Ee-0aYJ09xTKqw"/>
+    <profileApplication xmi:id="_t-mMXRa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMXha2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_t-mMXxa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMYBa2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_t-mMYRa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMYha2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_t-mMYxa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMZBa2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://CPP_LANGUAGE_PROFILE/CppPropertySets.epx#_5TYAwMk4EeO2m9WtkWjeeQ?CppPropertySets/CppPropertySets?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://CPP_LANGUAGE_PROFILE/CppPropertySets.epx#_TNvRgL3gEduxAOGdMW1qJA?CppPropertySets?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_t-mMZha2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mMZxa2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RT_PROPERTIES/UMLRealTime.epx#_3TUzoXq6Ed2hSeAAWZznoA?UMLRealTime/UMLRealTime?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://RT_PROPERTIES/UMLRealTime.epx#_uTDwIRHVEdu19OChlR9tHg?UMLRealTime?"/>
+    </profileApplication>
+    <profileApplication xmi:id="_t-mzYBa2Ee-0aYJ09xTKqw">
+      <eAnnotations xmi:id="_t-mzYRa2Ee-0aYJ09xTKqw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RT_PROPERTIES/InteractionProfile.epx#_dDVwwX8wEd2ags_Lr77Vow?InteractionProfile/InteractionProfile?"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://RT_PROPERTIES/InteractionProfile.epx#_LyeQ4HnVEd2No7ra0rEeOg?InteractionProfile?"/>
+    </profileApplication>
+  </uml:Package>
+  <Default:DefaultLanguage xmi:id="_t-mMZRa2Ee-0aYJ09xTKqw" base_Package="_t-llQBa2Ee-0aYJ09xTKqw" defaultLanguage="C++"/>
+  <UMLRealTime:Capsule xmi:id="_vaefABa3Ee-0aYJ09xTKqw" base_Class="_vaY_cBa3Ee-0aYJ09xTKqw"/>
+  <CppPropertySets:GeneralCapsuleProperties xmi:id="_vaefARa3Ee-0aYJ09xTKqw" base_Class="_vaY_cBa3Ee-0aYJ09xTKqw">
+    <headerPreface xmi:id="_vaefAha3Ee-0aYJ09xTKqw" body="#include &lt;string>&#xD;&#xA;#include &lt;map>&#xD;&#xA;#include &lt;mutex>&#xD;&#xA;#include &lt;grpcpp/grpcpp.h>&#xD;&#xA;&#xD;&#xA;using grpc::ServerCompletionQueue;&#xD;&#xA;using grpc::Server;&#xD;&#xA;using grpc::ServerBuilder;&#xD;&#xA;class ServerJob;&#xD;&#xA;"/>
+    <implementationPreface xmi:id="_vaefAxa3Ee-0aYJ09xTKqw" body="#include &lt;grpcpp/ext/proto_server_reflection_plugin.h>&#xD;&#xA;#include &lt;grpcpp/grpcpp.h>&#xD;&#xA;#include &lt;grpcpp/health_check_service_interface.h>&#xD;&#xA;&#xD;&#xA;// Intercept incoming RPC requests and give them to the GRPC_Server for processing&#xD;&#xA;class ServerJob : public RTJob {&#xD;&#xA;&#x9;GRPC_Server_Actor* server;&#xD;&#xA;&#xD;&#xA;public:&#xD;&#xA;&#x9;ServerJob(GRPC_Server_Actor* s) : server(s) {}&#xD;&#xA;&#xD;&#xA;&#x9;virtual const char* name( void ) const override {&#xD;&#xA;&#x9;&#x9;return &quot;GRPC Server Job&quot;;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;virtual void mainLoop( void ) override {&#xD;&#xA;&#x9;&#x9;// Spawn CallData instances to serve new clients.&#xD;&#xA;&#x9;&#x9;server->createCallDatas();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;void* tag;  // uniquely identifies a request.&#xD;&#xA;&#x9;&#x9;bool ok;&#xD;&#xA;&#x9;&#x9;while (true) {&#xD;&#xA;&#x9;&#x9;&#x9;// Block waiting to read the next event from the completion queue. The&#xD;&#xA;&#x9;&#x9;&#x9;// event is uniquely identified by its tag, which in this case is the&#xD;&#xA;&#x9;&#x9;&#x9;// memory address of a CallData instance.&#xD;&#xA;&#x9;&#x9;&#x9;// The return value of Next should always be checked. This return value&#xD;&#xA;&#x9;&#x9;&#x9;// tells us whether there is any kind of event or cq_ is shutting down.&#xD;&#xA;&#x9;&#x9;&#x9;GPR_ASSERT(server->cq->Next(&amp;tag, &amp;ok));&#xD;&#xA;&#x9;&#x9;&#x9;GPR_ASSERT(ok);&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;// Pass the request to the server capsule&#xD;&#xA;&#x9;&#x9;&#x9;server->external.dataPushBack(tag);&#xD;&#xA;&#x9;&#x9;&#x9;if (server->external.raise() == 0) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;// The server capsule is not ready to receive the external event. &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;// TODO: Wait a little and try 2 more times before giving up.&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;virtual void kill( void ) override {&#xD;&#xA;&#xD;&#xA;&#x9;}&#xD;&#xA;};&#xD;&#xA;"/>
+    <publicDeclarations xmi:id="_vaefBBa3Ee-0aYJ09xTKqw" body="friend class ServerJob;"/>
+  </CppPropertySets:GeneralCapsuleProperties>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vaefBRa3Ee-0aYJ09xTKqw" base_Property="_vaY_dxa3Ee-0aYJ09xTKqw" nativeType="uint16_t"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vaefBha3Ee-0aYJ09xTKqw" base_Property="_vaY_dxa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vaefBxa3Ee-0aYJ09xTKqw" base_Property="_vaY_exa3Ee-0aYJ09xTKqw" nativeType="std::unique_ptr&lt;ServerCompletionQueue>"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vaefCBa3Ee-0aYJ09xTKqw" base_Property="_vaY_exa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vaefCRa3Ee-0aYJ09xTKqw" base_Property="_vaY_fha3Ee-0aYJ09xTKqw" nativeType="ServerJob*"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vaefCha3Ee-0aYJ09xTKqw" base_Property="_vaY_fha3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vaefCxa3Ee-0aYJ09xTKqw" base_Property="_vaY_gRa3Ee-0aYJ09xTKqw" nativeType="std::unique_ptr&lt;Server>"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vaefDBa3Ee-0aYJ09xTKqw" base_Property="_vaY_gRa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <UMLRealTime:RTPort xmi:id="_vaefDRa3Ee-0aYJ09xTKqw" isWired="false" base_Port="_vaZmgRa3Ee-0aYJ09xTKqw"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vaefDha3Ee-0aYJ09xTKqw" base_Property="_vaZmgha3Ee-0aYJ09xTKqw" nativeType="std::map&lt;std::string, SubscribeData*>"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vafGEBa3Ee-0aYJ09xTKqw" base_Property="_vaZmgha3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_vafGERa3Ee-0aYJ09xTKqw" base_Property="_vaZmhRa3Ee-0aYJ09xTKqw" nativeType="std::mutex"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_vafGEha3Ee-0aYJ09xTKqw" base_Property="_vaZmhRa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGExa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmwxa3Ee-0aYJ09xTKqw" nativeType="ServerBuilder&amp;"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGFBa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmxha3Ee-0aYJ09xTKqw" nativeType="const std::string&amp;"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGFRa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmxxa3Ee-0aYJ09xTKqw" nativeType="SubscribeData*"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGFha3Ee-0aYJ09xTKqw" base_Parameter="_vaZmyRa3Ee-0aYJ09xTKqw" nativeType="const std::string&amp;"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGFxa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmyha3Ee-0aYJ09xTKqw" nativeType="SubscribeData*"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGGBa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmzBa3Ee-0aYJ09xTKqw" nativeType="const std::string&amp;"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_vafGGRa3Ee-0aYJ09xTKqw" base_Parameter="_vaZmzRa3Ee-0aYJ09xTKqw" nativeType="SubscribeData*"/>
+  <CppPropertySets:GeneralClassProperties xmi:id="_0sX2cBa3Ee-0aYJ09xTKqw" base_Class="_0sVaMBa3Ee-0aYJ09xTKqw" generateAssignmentOperator="false" generateCopyConstructor="false" generateDefaultConstructor="false">
+    <headerPreface xmi:id="_0sX2cRa3Ee-0aYJ09xTKqw" body="#include &lt;grpcpp/grpcpp.h>&#xD;&#xA;&#xD;&#xA;using grpc::ServerCompletionQueue;&#xD;&#xA;using grpc::ServerContext;&#xD;&#xA;"/>
+    <implementationPreface xmi:id="_0sX2cha3Ee-0aYJ09xTKqw" body="using grpc::Status;"/>
+  </CppPropertySets:GeneralClassProperties>
+  <CppPropertySets:TargetRTSClassProperties xmi:id="_0sX2cxa3Ee-0aYJ09xTKqw" base_Class="_0sVaMBa3Ee-0aYJ09xTKqw" generateDescriptor="False"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_0sX2dBa3Ee-0aYJ09xTKqw" base_Property="_0sVaMRa3Ee-0aYJ09xTKqw" nativeType="ServerCompletionQueue*"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_0sX2dRa3Ee-0aYJ09xTKqw" base_Property="_0sVaMRa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_0sX2dha3Ee-0aYJ09xTKqw" base_Property="_0sVaNBa3Ee-0aYJ09xTKqw" nativeType="ServerContext"/>
+  <CppPropertySets:TargetRTSAttributeProperties xmi:id="_0sX2dxa3Ee-0aYJ09xTKqw" base_Property="_0sVaNBa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
+  <CppPropertySets:GeneralAttributeProperties xmi:id="_0sX2eBa3Ee-0aYJ09xTKqw" base_Property="_0sVaNxa3Ee-0aYJ09xTKqw"/>
+  <CppPropertySets:GeneralOperationProperties xmi:id="_0sX2eRa3Ee-0aYJ09xTKqw" base_Operation="_0sVaQBa3Ee-0aYJ09xTKqw">
+    <constructorInitializer xmi:id="_0sX2eha3Ee-0aYJ09xTKqw" body="cq_(cq), status_(CREATE)"/>
+  </CppPropertySets:GeneralOperationProperties>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_0sYdgBa3Ee-0aYJ09xTKqw" base_Parameter="_0sVaQRa3Ee-0aYJ09xTKqw" nativeType="ServerCompletionQueue*"/>
+  <CppPropertySets:GeneralOperationProperties xmi:id="_0sYdgRa3Ee-0aYJ09xTKqw" base_Operation="_0sVaRha3Ee-0aYJ09xTKqw" polymorphic="true"/>
+  <CppPropertySets:TargetRTSClassProperties xmi:id="_0sYdgha3Ee-0aYJ09xTKqw" base_Class="_0sXPYBa3Ee-0aYJ09xTKqw" generateDescriptor="False"/>
+  <CppPropertySets:GeneralClassProperties xmi:id="_0sYdgxa3Ee-0aYJ09xTKqw" base_Class="_0sXPYBa3Ee-0aYJ09xTKqw" generateAssignmentOperator="false" generateCopyConstructor="false" generateDefaultConstructor="false"/>
+  <CppPropertySets:GeneralOperationProperties xmi:id="_0sYdhBa3Ee-0aYJ09xTKqw" base_Operation="_0sXPZha3Ee-0aYJ09xTKqw">
+    <constructorInitializer xmi:id="_0sYdhRa3Ee-0aYJ09xTKqw" body="CallData(cq)"/>
+  </CppPropertySets:GeneralOperationProperties>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_0sYdhha3Ee-0aYJ09xTKqw" base_Parameter="_0sXPZxa3Ee-0aYJ09xTKqw" nativeType="ServerCompletionQueue*"/>
+  <CppPropertySets:GeneralDependencyProperties xmi:id="_ApOC8Ba4Ee-0aYJ09xTKqw" base_Dependency="_ADAXgBa4Ee-0aYJ09xTKqw" kindInHeader="none"/>
+  <CppPropertySets:GeneralOperationProperties xmi:id="_YiQy4BdAEe-0aYJ09xTKqw" base_Operation="_vaZmwRa3Ee-0aYJ09xTKqw" polymorphic="true"/>
+  <Default:Documentation xmi:id="_I_XQQBdBEe-0aYJ09xTKqw" base_Comment="_I_WCIBdBEe-0aYJ09xTKqw"/>
+</xmi:XMI>

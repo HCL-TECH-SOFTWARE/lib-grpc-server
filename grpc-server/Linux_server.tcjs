@@ -25,20 +25,19 @@ let grpcInstallLocation = '/home/pnplinuxadmin/grpc/install';
 tc.sources = [
     'platform:/resource/grpc-server/CPPModel.emx#_yhYUcNItEe6fffW4TiqQOQ',
 ];
+tc.prerequisites = ['platform:/resource/grpc-server-lib/grpc-lib.tcjs'];
 tc.createTargetProject = true;
 tc.targetProject = 'grpc-server_target';
+tc.executableName = 'maze_server$(EXEC_EXT)';
 tc.compilationMakeType = MakeType.GNU_make;
 tc.targetConfiguration = 'LinuxT.x64-gcc-12.x';
 tc.compilationMakeArguments = '';
-//tc.compileArguments = '$(DEBUG_TAG)';
 tc.inclusionPaths = [
     grpcSourceLocation + '/include',
     grpcSourceLocation + '/third_party/abseil-cpp',
     grpcInstallLocation + '/include',
-    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build',
+    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build', // Update this if the client build folder is elsewhere
 ];
-//tc.linkArguments = '/DEBUG';
-//tc.targetServicesLibrary = 'C:/TargetRTSUnzipped/TargetRTS';
 tc.threads = [
 {
     name: 'MainThread',
@@ -55,7 +54,7 @@ tc.threads = [
 ];
 tc.topCapsule = 'platform:/resource/grpc-server/CPPModel.emx#_0cO3kNItEe6fffW4TiqQOQ';
 tc.userLibraries = [
-    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build/libmaze_grpc_proto.a',
+    '/home/pnplinuxadmin/grpc/lib-grpc-server/grpc-client/build/libmaze_grpc_proto.a', // Update this if the client build folder is elsewhere
     grpcInstallLocation + '/lib64/libabsl_flags_parse.a',
     grpcInstallLocation + '/lib/libgrpc++_reflection.a',
     grpcInstallLocation + '/lib/libgrpc++.a',

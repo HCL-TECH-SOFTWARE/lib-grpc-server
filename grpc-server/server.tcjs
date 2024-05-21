@@ -25,6 +25,8 @@ let grpcInstallLocation = 'C:/grpc/install';
 tc.sources = [
     'platform:/resource/grpc-server/CPPModel.emx#_yhYUcNItEe6fffW4TiqQOQ',
 ];
+tc.prerequisites = ['platform:/resource/grpc-server-lib/grpc-lib.tcjs'];
+tc.executableName = 'maze_server$(EXEC_EXT)';
 tc.createTargetProject = true;
 tc.targetProject = 'grpc-server_target';
 tc.compilationMakeType = MakeType.MS_nmake;
@@ -35,10 +37,10 @@ tc.inclusionPaths = [
     grpcSourceLocation + '/include',
     grpcSourceLocation + '/third_party/abseil-cpp',
     grpcInstallLocation + '/include',
-    '../../grpc-client/build',
+    '../../grpc-client/build', // Update this if the client build folder is elsewhere
 ];
 tc.linkArguments = '/DEBUG';
-tc.targetServicesLibrary = 'C:/TargetRTSUnzipped/TargetRTS';
+tc.targetServicesLibrary = 'C:/TargetRTSUnzipped/TargetRTS'; // Replace with location where your TargetRTS is located
 tc.threads = [
 {
     name: 'MainThread',
@@ -55,7 +57,7 @@ tc.threads = [
 ];
 tc.topCapsule = 'platform:/resource/grpc-server/CPPModel.emx#_0cO3kNItEe6fffW4TiqQOQ';
 tc.userLibraries = [
-    '../../grpc-client/build/Debug/maze_grpc_proto.lib',
+    '../../grpc-client/build/Debug/maze_grpc_proto.lib', // Update this if the client build folder is elsewhere
     grpcInstallLocation + '/lib/absl_flags_parse.lib',
     grpcInstallLocation + '/lib/grpc++_reflection.lib',
     grpcInstallLocation + '/lib/grpc++.lib',
