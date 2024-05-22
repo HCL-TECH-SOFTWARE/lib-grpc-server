@@ -28,5 +28,5 @@ tc.createTargetProject = true;
 tc.inclusionPaths = TCF.getTopTC().eval.inclusionPaths;
 tc.targetConfiguration = TCF.getTopTC().eval.targetConfiguration;
 tc.targetProject = 'grpc-server_lib_target';
-tc.targetServicesLibrary = 'C:/TargetRTSUnzipped/TargetRTS';
+tc.targetServicesLibrary = TCF.getTopTC().eval.targetServicesLibrary;
 tc.type = CppTransformType.Library;
