@@ -304,11 +304,6 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
           <details xmi:id="_0sVaNha3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
         </eAnnotations>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_0sVaNxa3Ee-0aYJ09xTKqw" name="status_" visibility="private" type="_0sVaPBa3Ee-0aYJ09xTKqw">
-        <eAnnotations xmi:id="_0sVaOBa3Ee-0aYJ09xTKqw" source="com.hcl.xtools.properties">
-          <details xmi:id="_0sVaORa3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
-        </eAnnotations>
-      </ownedAttribute>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sVaOha3Ee-0aYJ09xTKqw" name="proceed" specification="_0sVaQha3Ee-0aYJ09xTKqw">
         <language>C++</language>
         <body>/*if (status_ == CREATE) {&#xD;
@@ -495,11 +490,6 @@ return;</body>
         <language>C++</language>
         <body>	rtg_init1(); // Initialize CallData state machine</body>
       </ownedBehavior>
-      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_0sVaPBa3Ee-0aYJ09xTKqw" name="CallStatus">
-        <ownedLiteral xmi:id="_0sVaPRa3Ee-0aYJ09xTKqw" name="CREATE" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
-        <ownedLiteral xmi:id="_0sVaPha3Ee-0aYJ09xTKqw" name="PROCESS" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
-        <ownedLiteral xmi:id="_0sVaPxa3Ee-0aYJ09xTKqw" name="FINISH" classifier="_0sVaPBa3Ee-0aYJ09xTKqw"/>
-      </nestedClassifier>
       <nestedClassifier xmi:type="uml:Component" xmi:id="_OO1rYBd5Ee-0aYJ09xTKqw" name="EventContainer">
         <packagedElement xmi:type="uml:CallEvent" xmi:id="_OO5VwBd5Ee-0aYJ09xTKqw" name="rt_0__proceed" operation="_OOxZ8Bd5Ee-0aYJ09xTKqw"/>
       </nestedClassifier>
@@ -609,9 +599,8 @@ return;</body>
   <CppPropertySets:TargetRTSAttributeProperties xmi:id="_0sX2dRa3Ee-0aYJ09xTKqw" base_Property="_0sVaMRa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
   <CppPropertySets:GeneralAttributeProperties xmi:id="_0sX2dha3Ee-0aYJ09xTKqw" base_Property="_0sVaNBa3Ee-0aYJ09xTKqw" nativeType="ServerContext"/>
   <CppPropertySets:TargetRTSAttributeProperties xmi:id="_0sX2dxa3Ee-0aYJ09xTKqw" base_Property="_0sVaNBa3Ee-0aYJ09xTKqw" generateDescriptor="false"/>
-  <CppPropertySets:GeneralAttributeProperties xmi:id="_0sX2eBa3Ee-0aYJ09xTKqw" base_Property="_0sVaNxa3Ee-0aYJ09xTKqw"/>
   <CppPropertySets:GeneralOperationProperties xmi:id="_0sX2eRa3Ee-0aYJ09xTKqw" base_Operation="_0sVaQBa3Ee-0aYJ09xTKqw">
-    <constructorInitializer xmi:id="_0sX2eha3Ee-0aYJ09xTKqw" body="cq_(cq), status_(CREATE)"/>
+    <constructorInitializer xmi:id="_0sX2eha3Ee-0aYJ09xTKqw" body="cq_(cq)"/>
   </CppPropertySets:GeneralOperationProperties>
   <CppPropertySets:GeneralParameterProperties xmi:id="_0sYdgBa3Ee-0aYJ09xTKqw" base_Parameter="_0sVaQRa3Ee-0aYJ09xTKqw" nativeType="ServerCompletionQueue*"/>
   <CppPropertySets:GeneralOperationProperties xmi:id="_0sYdgRa3Ee-0aYJ09xTKqw" base_Operation="_0sVaRha3Ee-0aYJ09xTKqw" polymorphic="true"/>
