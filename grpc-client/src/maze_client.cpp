@@ -252,7 +252,7 @@ int main(int argc, char** argv) {
     std::cout << "Walk the maze. Commands: " << std::endl;
     std::cout << "east, west, north, south : Take a step in a direction" << std::endl;
     std::cout << "steps : Report number of steps taken" << std::endl;
-    std::cout << "adjust : Adjust step count by specified number" << std::endl;
+    std::cout << "adjust <number>: Adjust step count by specified number" << std::endl;
     std::cout << "subscribe : Subscribe to be notified when wrong way taken" << std::endl;
     std::cout << "unsubscribe : Unsubscribe to be notified when wrong way taken" << std::endl;
     std::cout << "exit : Exit" << std::endl;
@@ -273,9 +273,26 @@ int main(int argc, char** argv) {
             std::cout << "Step count: " << count << std::endl;
         }
         else if (command.rfind("adjust", 0) == 0) {
+            size_t i = command.find(" ");
+            if (i == std::string::npos) {
+                std::cout << "ERROR: adjust expects a number argument" << std::endl;
+                continue;
+            }
             std::string a = command.substr(command.find(" ") + 1);
-            int32_t adjustment = std::stoi(a);
-            mazeWalker.AdjustStepCount(adjustment);
+            try {
+                int32_t adjustment = std::stoi(a);
+                mazeWalker.AdjustStepCount(adjustment);
+            }
+            catch (std::invalid_argument const& ex)
+            {
+                std::cout << "ERROR: argument for adjust is not a valid number" << std::endl;
+                continue;
+            }
+            catch (std::out_of_range const& ex)
+            {
+                std::cout << "ERROR: argument for adjust is too high" << std::endl;
+                continue;
+            }
         }
         else if (command.rfind("subscribe", 0) == 0) {
             if (mazeWalker.subscribed) {

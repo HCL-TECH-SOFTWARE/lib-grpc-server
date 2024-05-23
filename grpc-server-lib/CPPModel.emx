@@ -304,35 +304,6 @@ subscriptionsForOutgoingEvents[id] = data;&#xD;
           <details xmi:id="_0sVaNha3Ee-0aYJ09xTKqw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
         </eAnnotations>
       </ownedAttribute>
-      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sVaOha3Ee-0aYJ09xTKqw" name="proceed" specification="_0sVaQha3Ee-0aYJ09xTKqw">
-        <language>C++</language>
-        <body>/*if (status_ == CREATE) {&#xD;
-	// Make this instance progress to the PROCESS state.&#xD;
-    status_ = PROCESS;&#xD;
-&#xD;
-    // As part of the initial CREATE state, we *request* that the system&#xD;
-    // start processing SayHello requests. In this request, &quot;this&quot; acts are&#xD;
-    // the tag uniquely identifying the request (so that different CallData&#xD;
-    // instances can serve different requests concurrently), in this case&#xD;
-    // the memory address of this CallData instance.&#xD;
-    startRequest();&#xD;
-}&#xD;
-else if (status_ == PROCESS) {&#xD;
-    // Spawn a new CallData instance to serve new clients while we process&#xD;
-    // the one for this CallData. The instance will deallocate itself as&#xD;
-    // part of its FINISH state.&#xD;
-    newCallData();&#xD;
-&#xD;
-    completeRequest();&#xD;
-    status_ = FINISH;&#xD;
-}&#xD;
-else {&#xD;
-    GPR_ASSERT(status_ == FINISH);&#xD;
-    // Once in the FINISH state, deallocate ourselves (CallData).&#xD;
-    onFinished();&#xD;
-}*/&#xD;
-	_proceed();</body>
-      </ownedBehavior>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0sVaOxa3Ee-0aYJ09xTKqw" name="onFinished" specification="_0sVaRha3Ee-0aYJ09xTKqw">
         <language>C++</language>
         <body>delete this;</body>
@@ -491,17 +462,16 @@ return;</body>
         <body>	rtg_init1(); // Initialize CallData state machine</body>
       </ownedBehavior>
       <nestedClassifier xmi:type="uml:Component" xmi:id="_OO1rYBd5Ee-0aYJ09xTKqw" name="EventContainer">
-        <packagedElement xmi:type="uml:CallEvent" xmi:id="_OO5VwBd5Ee-0aYJ09xTKqw" name="rt_0__proceed" operation="_OOxZ8Bd5Ee-0aYJ09xTKqw"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_OO5VwBd5Ee-0aYJ09xTKqw" name="rt_0_proceed" operation="_OOxZ8Bd5Ee-0aYJ09xTKqw"/>
       </nestedClassifier>
       <ownedOperation xmi:id="_0sVaQBa3Ee-0aYJ09xTKqw" name="CallData" method="_-MBasBgKEe-0aYJ09xTKqw">
         <ownedParameter xmi:id="_0sVaQRa3Ee-0aYJ09xTKqw" name="cq"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_0sVaQha3Ee-0aYJ09xTKqw" name="proceed" method="_0sVaOha3Ee-0aYJ09xTKqw"/>
       <ownedOperation xmi:id="_0sVaQxa3Ee-0aYJ09xTKqw" name="startRequest" isAbstract="true"/>
       <ownedOperation xmi:id="_0sVaRBa3Ee-0aYJ09xTKqw" name="newCallData" isAbstract="true"/>
       <ownedOperation xmi:id="_0sVaRRa3Ee-0aYJ09xTKqw" name="completeRequest" isAbstract="true"/>
       <ownedOperation xmi:id="_0sVaRha3Ee-0aYJ09xTKqw" name="onFinished" method="_0sVaOxa3Ee-0aYJ09xTKqw"/>
-      <ownedOperation xmi:id="_OOxZ8Bd5Ee-0aYJ09xTKqw" name="_proceed">
+      <ownedOperation xmi:id="_OOxZ8Bd5Ee-0aYJ09xTKqw" name="proceed">
         <ownedParameter xmi:id="_OO580Bd5Ee-0aYJ09xTKqw" name="Parameter1" direction="return">
           <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_f0877hKyEdyaM9S2zG4bgA?CppPrimitiveDatatypes/void?"/>
         </ownedParameter>
