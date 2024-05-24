@@ -155,7 +155,7 @@ This is a regular request which is handled exactly like other non-subscription r
 
 In the sample client, the finishing of a subscription request will terminate the thread that was launched for managing that subscription while it was active.
 
-## Start using the {{DOC_PRODUCT}} gRPC library
+## Start using the Model RealTime gRPC library
 To start using the gRPC library for implementing a gRPC server in your own realtime application you can follow these steps:
 
 1. Add the [`grpc-server-lib/grpc-lib.tcjs`](/grpc-server-lib/grpc-lib.tcjs) as a prerequisite of your TC. This library TC is set-up to reuse the properties defined in your executable TC, so you usually don't need to modify it. However, you need to add to your TC the inclusion paths and user libraries required by gRPC. You can copy this information from the ([`server.tcjs`](/grpc-server/server.tcjs)) of the sample server application.
